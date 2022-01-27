@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
+    <title>Login | FakeCee</title>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body onload="valid()">
+  <div class="limiter">
+    <div class="container-login">
+      <div class="m-auto">
+        <form class="form-group">
+            <span class="login-form-title">Welcome to FakeCee!</span>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="uname" name="username" placeholder="Enter Username">
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" id="upass" name="password" placeholder="Enter Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+              <button class="btn btn-block btn-primary btn-lg" type="submit" onclick="login()" >Log In</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
