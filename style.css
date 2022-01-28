@@ -4,10 +4,18 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .limiter {
   width: 100%;
   margin: 0 auto;
 }
+
+/* 
+  LOGIN 
+*/
 
 .container-login {
   width: 100%;
@@ -26,4 +34,40 @@
   line-height: 1.2;
   text-align: center;
   padding-bottom: 20px;
+}
+
+/* 
+  HOME
+*/
+
+.theatre-section {
+  text-align: center;
+  padding: 5rem 2rem 1rem 2rem;
+}
+
+.theatre-section-header {
+  font-size: 2rem;
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+}
+
+.theatres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.theatre-img {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
