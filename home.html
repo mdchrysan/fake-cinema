@@ -12,29 +12,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-  <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark container-fluid">
+  <nav id="navbar" class="nav">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">FakeCee</a>
+      <a class="navbar-brand" href="#" >FakeCee</a>
     </div>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active bg-dark" data-bs-toggle="tab" href="#home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="now.html">Now Playing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="soon.html">Coming Soon</a>
-      </li>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="now.html">Now Playing</a></li>
+      <li><a href="soon.html">Coming Soon</a></li>
     </ul>
-    <ul class="nav nav-tabs navbar-right">
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#">
-          <span class="glyphicon glyphicon-log-out"></span>
-          Log Out
-        </a>
-      </li>
+    <ul>
+      <li><a href="#">Log Out</a></li>
     </ul>
-  </div>
+  </nav>
+  <section id="welcome-section" class="welcome-section">
+    <h1>Welcome to FakeCee</h1>
+    <p>Catch up now, the most updated movie!</p>
+  </section>
+
+  <section id="theatre" class="theatre-section">
+    <h2 class="theatre-section-header">
+      Check Out Movies Schedule on the Nearest Theatre
+    </h2>
+    <div class="theatre-grid card border-secondary mb-3">
+      <a href="https://21cineplex.com/">
+        <div class="card-header">Cineplex 21</div>
+        <div class="card-body">
+          <img class="theatre-img" src="img/xxi.jpeg" alt="Cineplex 21 Logo">
+        </div>
+      </a>
+      <a href="https://www.cgv.id/">
+        <div class="card-header">CGV Cinemas</div>
+        <div class="card-body">
+          <img class="theatre-img" src="img/cgv.jpeg" alt="CGV Cinemas Logo">
+        </div>
+      </a>
+      <a href="https://www.cinepolis.co.id/">
+        <div class="card-header">Cinépolis</div>
+        <div class="card-body">
+          <img class="theatre-img" src="img/cinepolis.jpeg" alt="Cinepolis Logo">
+        </div>
+      </a>
+      <a href="https://www.instagram.com/kcm_corp/?hl=en">
+        <div class="card-header">Kota Cinema Mall</div>
+        <div class="card-body">
+          <img class="theatre-img" src="img/kcm.png" alt="Kota Cinema Mall Logo">
+        </div>
+      </a>
+      <a href="https://www.nsc8.com/">
+        <div class="card-header">New Star Cineplex</div>
+        <div class="card-body">
+          <img class="theatre-img" src="img/newstar.jpeg" alt="New Star Cineplex Logo">
+        </div>
+      </a>
+    </div>
+  </section>
+
 </body>
+<footer>by !MariaDB</footer>
 </html>
