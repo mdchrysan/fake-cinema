@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+footer {
+  text-align: center;
+}
+
 .limiter {
   width: 100%;
   margin: 0 auto;
@@ -66,12 +70,14 @@ a {
   font-size: 1.5rem;
 }
 
-.theatre-section {
+.theatre-section,
+.movie-container {
   text-align: center;
   padding: 5rem 2rem 1rem 2rem;
 }
 
-.theatre-section-header {
+.theatre-section-header,
+.movie-header {
   font-size: 2rem;
   max-width: 640px;
   margin: 0 auto 3rem auto;
@@ -98,6 +104,26 @@ a {
   transform: scale(1.05);
 }
 
-footer {
-  text-align: center;
+/* 
+  Now Playing
+*/
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.movie-card {
+  height: 500px;
+}
+
+.movie-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

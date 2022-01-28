@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
-    <title>Now Playing | FakeCee</title>
-    <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
+  <title>Now Playing | FakeCee</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="now.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -34,21 +34,22 @@
     </div>
   </nav>
 
-  <div class="container">
-		<div id="movies" class="row">
-			<div ng-repeat="x in movies">
-				<div class="col-md-3 col-xs-6">
-					<div class="panel panel-default text-center">
-						<div class="panel-body">
-							<img ng-src="http://image.tmdb.org/t/p/w185/{{x.poster_path}}" >
-							<p class="mytext" >{{x.title}}</p>
-							<p class="mytext" >Release Date : {{x.release_date}}</p>
-							<input type="button" value="Details"  class="btn btn-default btn-lg btn-block" ng-click="detail(x.id)">
-						</div>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="movie-container">
+    <h2 class="movie-header">
+      Now Playing Movies
+    </h2>
+    <div id="movieList" class="movies-grid">
+      <div ng-repeat="m in movieList">
+        <div class="card border-dark mb-3 movie-card" ng-click="detail(m.id)">
+          <img class="movie-img" ng-src="http://image.tmdb.org/t/p/w500/{{m.poster_path}}" alt="[movie poster]">
+          <div class="card-body">
+            <h5 class="movie-title">{{m.title}}</h5>
+            <p class="text-primary"><small>{{m.release_date | date : "'Released ' d MMM y"}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<footer>by !MariaDB</footer>
 </html>
