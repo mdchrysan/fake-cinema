@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
+  <title>Movie Details | FakeCee</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">FakeCee</a>
+      </div>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nav-items" aria-controls="nav-items" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav-items" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="now.html">Now Playing</a></li>
+          <li class="nav-item"><a class="nav-link" href="soon.html">Coming Soon</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="movie-container">
+    <div id="movie" class="details-container">
+        <div class="details-img">
+            <img class="details-movie-img" ng-src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="[Movie Poster]">
+            <!-- <img class="details-movie-img" ng-src="https://images.ctfassets.net/4cd45et68cgf/22eaxyrfqLTOmD0ZgFJDX0/6d7b8a0f4c3130fd87c9921cbd11d180/image5.jpg" alt="[Movie Poster]"> -->
+        </div>
+        <div class="">
+            <h2>{{movie.title}}</h2>
+            <h5>{{movie.tagline}}</h5>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Genre: </strong>
+                    <text ng-repeat="g in movie.genres"> {{g.name}},</text></li>
+                <li class="list-group-item">
+                    <strong>Production: </strong>
+                    <text ng-repeat="p in movie.production_companies"> {{p.name}},</text></li>
+                <li class="list-group-item">
+                    <strong>Duration: </strong> {{movie.runtime}} Minutes</li>
+            </ul>
+            <div>
+                <h5>Overview</h5>
+                <p>{{movie.overview}}</p>
+            </div>
+            <div class="detail-buttons">
+                <button type="button" class="btn btn-outline-danger" href="home.html">Back to Home</button>
+                <button type="button" class="btn btn-outline-warning" href="http://imdb.com/title/{{movie.imdb_id}}" target="_blank">View iMDB</button>
+                <button type="button" class="btn btn-outline-success" href="#">Watch Trailer</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+<footer>by !MariaDB</footer>
+</html>
