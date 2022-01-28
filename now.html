@@ -12,30 +12,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
-  <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">FakeCee</a>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">FakeCee</a>
+      </div>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nav-items" aria-controls="nav-items" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav-items" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="now.html">Now Playing</a></li>
+          <li class="nav-item"><a class="nav-link" href="soon.html">Coming Soon</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+        </ul>
+      </div>
     </div>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="home.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active bg-dark" data-bs-toggle="tab" href="now.html">Now Playing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="soon.html">Coming Soon</a>
-      </li>
-    </ul>
-    <ul class="nav nav-tabs navbar-right">
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" href="#">
-          <span class="glyphicon glyphicon-log-out"></span>
-          Log Out
-        </a>
-      </li>
-    </ul>
-  </div>
+  </nav>
+
   <div class="container">
 		<div id="movies" class="row">
 			<div ng-repeat="x in movies">
