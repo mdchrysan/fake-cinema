@@ -34,6 +34,18 @@
     </div>
   </nav>
 
+  <!-- 
+    PROPERTIES USED
+    1. img -> poster_path
+    2. title
+    3. tagline
+    4. genres
+    5. production_companies
+    6. runtime
+    7. overview
+    8. imdb_id
+    9. video -> ?
+  -->
   <div class="movie-container">
     <div id="movie" class="details-container">
         <div class="details-img">
@@ -43,16 +55,24 @@
         <div class="">
             <h2>{{movie.title}}</h2>
             <h5>{{movie.tagline}}</h5>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Genre: </strong>
-                    <text ng-repeat="g in movie.genres"> {{g.name}},</text></li>
-                <li class="list-group-item">
-                    <strong>Production: </strong>
-                    <text ng-repeat="p in movie.production_companies"> {{p.name}},</text></li>
-                <li class="list-group-item">
-                    <strong>Duration: </strong> {{movie.runtime}} Minutes</li>
-            </ul>
+      
+            <table class="table table-hover">
+              <tbody>
+                <tr class="table-dark">
+                  <th scope="row">Genre</th>
+                  <td><text ng-repeat="g in movie.genres"> {{g.name}},</text></td>
+                </tr>
+                <tr class="table-dark">
+                  <th scope="row">Production</th>
+                  <td><text ng-repeat="p in movie.production_companies"> {{p.name}},</text></td>
+                </tr>
+                <tr class="table-dark">
+                  <th scope="row">Duration</th>
+                  <td>{{movie.runtime}} Minutes</td>
+                </tr>
+              </tbody>
+            </table>
+
             <div>
                 <h5>Overview</h5>
                 <p>{{movie.overview}}</p>
