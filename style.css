@@ -70,8 +70,7 @@ footer {
   font-size: 1.5rem;
 }
 
-.theatre-section,
-.movie-container {
+.theatre-section {
   text-align: center;
   padding: 5rem 2rem 1rem 2rem;
 }
@@ -108,6 +107,11 @@ footer {
   Now Playing & Coming Soon
 */
 
+.movie-container {
+  text-align: center;
+  padding: 5rem 2rem 1rem 2rem;
+}
+
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -133,25 +137,45 @@ footer {
 */
 
 .details-container {
+  padding: 5rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.details-content {
   display: grid;
-  grid-template-columns: 25% auto;
-  grid-template-rows: 100px 80px 150px 200px;
+  grid-template-columns: 40% auto;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 2rem;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  padding: 10px;
   /* comment this after testing */
-  background-color: black;
+  /* background-image: linear-gradient(#0c1f4c, #1a0933); */
 }
 
 .details-img {
-  grid-area: 1 / 1 / 4 / 2;
   justify-items: center;
 }
 
 .details-movie-img {
-  height: 100%;
   width: 100%;
   object-fit: cover;
+  box-shadow: 10px 10px 50px black;
+}
+
+.details-overview {
+  color: aliceblue;
+  text-align: justify;
+}
+
+.details-buttons {
+  display: flex;
+  justify-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }

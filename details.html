@@ -46,8 +46,8 @@
     8. imdb_id
     9. video -> ?
   -->
-  <div class="movie-container">
-    <div id="movie" class="details-container">
+  <div class="details-container">
+    <div id="movie" class="details-content">
         <div class="details-img">
             <img class="details-movie-img" ng-src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="[Movie Poster]">
             <!-- <img class="details-movie-img" ng-src="https://images.ctfassets.net/4cd45et68cgf/22eaxyrfqLTOmD0ZgFJDX0/6d7b8a0f4c3130fd87c9921cbd11d180/image5.jpg" alt="[Movie Poster]"> -->
@@ -75,12 +75,12 @@
 
             <div>
                 <h5>Overview</h5>
-                <p>{{movie.overview}}</p>
+                <p class="details-overview">{{movie.overview}}</p>
             </div>
-            <div class="detail-buttons">
-                <button type="button" class="btn btn-outline-danger" href="home.html">Back to Home</button>
-                <button type="button" class="btn btn-outline-warning" href="http://imdb.com/title/{{movie.imdb_id}}" target="_blank">View iMDB</button>
-                <button type="button" class="btn btn-outline-success" href="#">Watch Trailer</button>
+            <div class="details-buttons">
+              <a class="btn btn-outline-danger mr-3" href="home.html">Back to Home</a>
+              <a class="btn btn-outline-warning mr-3" href="http://imdb.com/title/{{movie.imdb_id}}" target="_blank">View iMDB</a>
+              <a class="btn btn-outline-success" href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Sorry, not availble for now.">Watch Trailer</a>
             </div>
         </div>
     </div>
